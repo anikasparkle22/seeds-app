@@ -1,16 +1,35 @@
-import { Stack } from "expo-router";
-import { Button, YStack } from "tamagui";
+import React from "react";
+import { Image } from "react-native";
+import { YStack, Label, Input, Form, Button } from "tamagui";
+import { Link } from "expo-router";
 
-export default () => {
+// Tell webpack this JS file uses this image
+
+//console.log(home); // /logo.84287d09.png
+
+function Header() {
+  // Import result is the URL of your image
   return (
-    <YStack
-      flex={1}
-      justifyContent="center"
-      alignItems="center"
-      backgroundColor="#ddf"
-    >
-      <Stack.Screen options={{ title: "Home" }} />
-      <Button>Click Me</Button>
+    <YStack flex={1}>
+      <Form>
+        <Label htmlFor="student-email">Student Email</Label>
+        <Input id="student-email" defaultValue="user@cornell.edu" />
+        <Label htmlFor="Password">Password</Label>
+        <Input id="Password" defaultValue="********" />
+        <Form.Trigger asChild>
+          <Button>
+            <Link href="/onboarding">Login</Link>
+          </Button>
+        </Form.Trigger>
+      </Form>
+      <Image
+        source={require("../assets/login.png")}
+        alt="Logo"
+        style={{ width: 390, height: 844 }}
+      />
     </YStack>
   );
-};
+}
+
+export default Header;
+console.log(Header);

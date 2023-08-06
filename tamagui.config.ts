@@ -1,1 +1,1 @@
-export { default } from "./src/config/tamagui.config";
+export { default } from "./app/src/config/tamagui.config";
