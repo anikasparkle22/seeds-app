@@ -18,7 +18,6 @@ function Header() {
       borderRadius="$1"
       padding="$7"
       alignSelf="center"
-      backgroundColor={}
     >
       <Form class="form1">
         <Label htmlFor="student-email">Student Email</Label>
