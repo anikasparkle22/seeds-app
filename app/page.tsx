@@ -7,21 +7,23 @@ function Header() {
   // Import result is the URL of your image
   return (
     <ScrollView>
-      <YStack flex={1}>
+      <YStack flex={1} backgroundColor={"white"} alignItems="center">
         <Image
           source={require("../assets/coping.png")}
           alt="Logo"
           style={{ width: 390, height: 1987 }}
         />
-        <Image
-          source={require("../assets/finread.png")}
-          alt="Logo"
-          style={{
-            width: 309.5,
-            height: 55,
-            alignSelf: "center",
-          }}
-        />
+        <Link href="/Resources">
+          <Image
+            source={require("../assets/finread.png")}
+            alt="Logo"
+            style={{
+              width: 309.5,
+              height: 55,
+              alignSelf: "center",
+            }}
+          />{" "}
+        </Link>
       </YStack>
     </ScrollView>
   );
