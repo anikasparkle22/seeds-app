@@ -1,6 +1,6 @@
 import React from "react";
 import { Image } from "react-native";
-import { YStack, Label, Input, Form, Button } from "tamagui";
+import { YStack, Label, Input, Form, Button, styled } from "tamagui";
 import { Link } from "expo-router";
 
 // Tell webpack this JS file uses this image
@@ -10,8 +10,17 @@ import { Link } from "expo-router";
 function Header() {
   // Import result is the URL of your image
   return (
-    <YStack flex={1}>
-      <Form>
+    <YStack
+      flex={1}
+      minWidth={300}
+      space="$0"
+      borderWidth={1}
+      borderRadius="$1"
+      padding="$7"
+      alignSelf="center"
+      backgroundColor={}
+    >
+      <Form class="form1">
         <Label htmlFor="student-email">Student Email</Label>
         <Input id="student-email" defaultValue="user@cornell.edu" />
         <Label htmlFor="Password">Password</Label>
