@@ -28,7 +28,7 @@ function Header() {
         </Label>
         <Input id="Password" />
         <Form.Trigger asChild>
-          <Button>
+          <Button alignSelf="center" theme="blue">
             <Link href="/page">Done</Link>
           </Button>
         </Form.Trigger>
