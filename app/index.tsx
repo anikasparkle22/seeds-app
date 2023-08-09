@@ -1,40 +1,55 @@
 import React from "react";
 import { Image } from "react-native";
-import { YStack, Label, Input, Form, Button, styled } from "tamagui";
+import { YStack, Label, Input, Form, Button, styled, Card } from "tamagui";
 import { Link } from "expo-router";
-
-// Tell webpack this JS file uses this image
-
-//console.log(home); // /logo.84287d09.png
+import { redA } from "@tamagui/themes";
+import { Airplay } from "@tamagui/lucide-icons";
+import { NavigationContainer } from "@react-navigation/native";
+import "react-native-gesture-handler";
 
 function Header() {
   // Import result is the URL of your image
   return (
     <YStack
       flex={1}
-      minWidth={300}
+      minWidth={390}
       space="$0"
       borderWidth={1}
       borderRadius="$1"
       padding="$7"
       alignSelf="center"
     >
-      <Form class="form1">
-        <Label htmlFor="student-email">Student Email</Label>
-        <Input id="student-email" defaultValue="user@cornell.edu" />
-        <Label htmlFor="Password">Password</Label>
-        <Input id="Password" defaultValue="********" />
+      <Card.Background>
+        <Image
+          resizeMode="contain"
+          alignSelf="center"
+          source={require("../assets/login.png")}
+          alt="Logo"
+          style={{ width: 500, height: 900 }}
+        />
+      </Card.Background>
+      <Form class="form1" paddingTop="$15">
+        <Label
+          htmlFor="student-email"
+          color="white"
+          paddingTop="$2"
+          fontSize={17}
+        >
+          Student Email
+        </Label>
+        <Input id="student-email" defaultValue="" />
+        <Label htmlFor="Pass" fontSize="17" color="white" paddingTop="$2">
+          Password
+        </Label>
+        <Input id="Passwordinput" defaultValue="" />
         <Form.Trigger asChild>
-          <Button>
-            <Link href="/onboarding">Login</Link>
-          </Button>
+          <Card.Footer paddingTop="$10">
+            <Button circular alignSelf="center" justifyContent="center">
+              <Link href="/onboarding">Login</Link>
+            </Button>
+          </Card.Footer>
         </Form.Trigger>
       </Form>
-      <Image
-        source={require("../assets/login.png")}
-        alt="Logo"
-        style={{ width: 390, height: 844 }}
-      />
     </YStack>
   );
 }

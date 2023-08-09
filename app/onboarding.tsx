@@ -1,6 +1,6 @@
 import React from "react";
 import { Image } from "react-native";
-import { YStack, Label, Input, Form, Button, Card } from "tamagui";
+import { YStack, Label, Input, Form, Button, Card, Select } from "tamagui";
 import { Link } from "expo-router";
 import { redA } from "@tamagui/themes";
 import { Airplay } from "@tamagui/lucide-icons";
@@ -10,7 +10,7 @@ function Header() {
   return (
     <YStack
       flex={1}
-      minWidth={300}
+      minWidth={400}
       space="$0"
       borderWidth={1}
       borderRadius="$1"
@@ -40,16 +40,16 @@ function Header() {
         <Label fontSize="17" color="white" paddingTop="$2" htmlFor="Password">
           What is your gender?
         </Label>
-        <Input id="Password" />
+        <Input id="Gender" />
         <Label
           fontSize="17"
           color="white"
           paddingTop="$2"
           htmlFor="student-email"
         >
-          What would you like your treatment to be focused on?
+          What are your treatment goals?
         </Label>
-        <Input id="Password" />
+        <Input id="Treatment" />
 
         <Form.Trigger asChild>
           <Card.Footer paddingTop="$10">
