@@ -1,8 +1,9 @@
 import React from "react";
 import { Image } from "react-native";
-import { YStack, Label, Input, Form, Button } from "tamagui";
+import { YStack, Label, Input, Form, Button, Card } from "tamagui";
 import { Link } from "expo-router";
 import { redA } from "@tamagui/themes";
+import { Airplay } from "@tamagui/lucide-icons";
 
 function Header() {
   // Import result is the URL of your image
@@ -16,29 +17,53 @@ function Header() {
       padding="$7"
       alignSelf="center"
     >
-      <Form>
-        <Label htmlFor="student-email">
+      <Card.Background>
+        <Image
+          resizeMode="contain"
+          alignSelf="center"
+          source={require("../assets/onbd.png")}
+          alt="Logo"
+          style={{ width: 500, height: 900 }}
+        />
+      </Card.Background>
+
+      <Form paddingTop="$15">
+        <Label
+          fontSize="17"
+          color="white"
+          paddingTop="$2"
+          htmlFor="student-email"
+        >
           What school do you currently attend?
         </Label>
         <Input id="school" />
-        <Label htmlFor="Password">What is your gender?</Label>
+        <Label fontSize="17" color="white" paddingTop="$2" htmlFor="Password">
+          What is your gender?
+        </Label>
         <Input id="Password" />
-        <Label htmlFor="student-email">
+        <Label
+          fontSize="17"
+          color="white"
+          paddingTop="$2"
+          htmlFor="student-email"
+        >
           What would you like your treatment to be focused on?
         </Label>
         <Input id="Password" />
+
         <Form.Trigger asChild>
-          <Button alignSelf="center" theme="blue">
-            <Link href="/Resources">Done</Link>
-          </Button>
+          <Card.Footer paddingTop="$10">
+            <Button
+              circular
+              alignSelf="center"
+              justifyContent="center"
+              theme="blue"
+            >
+              <Link href="/page">Done</Link>
+            </Button>
+          </Card.Footer>
         </Form.Trigger>
       </Form>
-
-      <Image
-        source={require("../assets/onbd.png")}
-        alt="Logo"
-        style={{ width: 390, height: 844 }}
-      />
     </YStack>
   );
 }
