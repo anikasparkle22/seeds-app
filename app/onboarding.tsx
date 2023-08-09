@@ -59,7 +59,7 @@ function Header() {
               justifyContent="center"
               theme="blue"
             >
-              <Link href="/page">Done</Link>
+              <Link href="/Resources">Done</Link>
             </Button>
           </Card.Footer>
         </Form.Trigger>
