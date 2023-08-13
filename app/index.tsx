@@ -6,6 +6,7 @@ import { redA } from "@tamagui/themes";
 import { Airplay } from "@tamagui/lucide-icons";
 import { NavigationContainer } from "@react-navigation/native";
 import "react-native-gesture-handler";
+import { ChangeEvent, InputHTMLAttributes, Ref, forwardRef } from "react";
 
 function Header() {
   // Import result is the URL of your image
@@ -29,19 +30,14 @@ function Header() {
         />
       </Card.Background>
       <Form class="form1" paddingTop="$15">
-        <Label
-          htmlFor="student-email"
-          color="white"
-          paddingTop="$2"
-          fontSize={17}
-        >
+        <Label htmlFor="student-email" color="white" paddingTop="$2">
           Student Email
         </Label>
-        <Input id="student-email" defaultValue="" />
-        <Label htmlFor="Pass" fontSize="17" color="white" paddingTop="$2">
+        <Input id="student-email" defaultValue="" backgroundColor={"none"} />
+        <Label htmlFor="Pass" color="white" paddingTop="$2">
           Password
         </Label>
-        <Input id="Passwordinput" defaultValue="" />
+        <Input id="Passwordinput" defaultValue="" backgroundColor={"none"} />
         <Form.Trigger asChild>
           <Card.Footer paddingTop="$10">
             <Button circular alignSelf="center" justifyContent="center">
